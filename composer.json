@@ -1,0 +1,17 @@
+{
+    "name": "tlous/teste-composer",
+    "autoload": {
+        "psr-4": {
+            "Tlous\\TesteComposer\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "0RyanSouza0",
+            "email": "tlousouza678@gmail.com"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.10"
+    }
+}

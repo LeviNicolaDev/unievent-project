@@ -1,0 +1,351 @@
+:root {
+  --primary-orange: #f56f22;
+  --primary-black: #272727;
+  --primary-white: #ffffff;
+  --primary-gray: #d9d9d9;
+  --primary-font: "Plus Jakarta Sans", sans-serif;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--primary-black);
+  color: var(--primary-white);
+}
+
+.dark-mode {
+  background-color: var(--primary-white);
+  color: var(--primary-black);
+}
+
+header {
+  display: flex;
+  height: 200px;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  justify-content: space-between;
+}
+header .container-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.dark-mode .b-voltar {
+  text-decoration: none;
+  color: var(--primary-white);
+  font-size: 1rem;
+  padding: 8px;
+  border: 1px solid var(--primary-orange);
+  display: flex;
+  font-family: var(--primary-font);
+  font-weight: 800;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  transition: 0.2s all ease-in-out;
+}
+
+.b-voltar {
+  text-decoration: none;
+  color: var(--primary-white);
+  font-size: 1rem;
+  padding: 8px;
+  border: 1px solid var(--primary-orange);
+  display: flex;
+  font-family: var(--primary-font);
+  font-weight: 800;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  transition: 0.2s all ease-in-out;
+}
+
+.dark-mode .b-voltar {
+  color: var(--primary-black);
+}
+
+.b-voltar i {
+  font-size: 1rem;
+}
+
+.b-voltar:hover {
+  transition: 0.2s all ease-in-out;
+  background-color: var(--primary-orange);
+  border: var(--primary-orange);
+  padding: 8px;
+}
+
+.logo {
+  width: 350px;
+  height: 70px;
+}
+
+header p {
+  font-family: var(--primary-font);
+  font-weight: 700;
+  font-size: 40px;
+  text-decoration: none;
+  color: var(--primary-white);
+  margin-top: 15px;
+}
+
+.dark-mode header p {
+  color: var(--primary-black);
+}
+
+.container-app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tela {
+  width: 400px;
+  height: 900px;
+  margin-bottom: 5px;
+  border: 1px solid var(--primary-orange);
+  border-radius: 20px;
+}
+
+.header-app {
+  width: 300px;
+  height: 50px;
+  gap: 115%;
+  display: inline-flex;
+  padding: 5%;
+}
+
+.icones {
+  width: 30px;
+  height: 30px;
+}
+
+.icone-relogio {
+  width: 25px;
+  height: 25px;
+}
+
+.imgEvento {
+  width: 370px;
+  height: 200px;
+  border-radius: 10px;
+  margin: 20px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-family: var(--primary-font);
+  font-weight: 800;
+  font-size: 20px;
+  text-decoration: none;
+  color: var(--primary-white);
+  margin-left: 3%;
+}
+
+.dark-mode h1 {
+  color: var(--primary-black);
+}
+
+.informações {
+  display: block;
+  margin: 5% 5% 0% 0%;
+  padding-left: 3%;
+}
+
+.container-data-hora {
+  display: inline-flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.linhadivisao-1 {
+  width: 1px;
+  height: 20px;
+  background-color: var(--primary-gray);
+}
+
+.local,
+.data,
+.hora,
+.tipo {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.informações p {
+  font-family: var(--primary-font);
+  font-weight: 500;
+  font-size: 15px;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+.info-unidade {
+  width: 400px;
+  display: inline-flex;
+  margin: 3% 3% 0% 3%;
+  gap: 2%;
+}
+
+.organizador {
+  font-family: var(--primary-font);
+  font-weight: 500;
+  font-size: 12px;
+  text-decoration: none;
+  color: var(--primary-gray);
+  margin: 3% 0% 0% 3%;
+}
+
+.info-unidade p {
+  font-family: var(--primary-font);
+  font-weight: 400;
+  font-size: 15px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-unidade button {
+  width: 80px;
+  height: 30px;
+  font-family: var(--primary-font);
+  font-size: 13px;
+  background-color: var(--primary-orange);
+  color: var(--primary-white);
+  border-radius: 5px;
+  border: 0 none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 14%;
+}
+
+.dark-mode .info-unidade button {
+  color: var(--primary-black);
+}
+
+.linhadivisao-2 {
+  width: 80%;
+  height: 1px;
+  background-color: var(--primary-gray);
+  margin: 25px auto 25px auto;
+}
+
+.descrição {
+  margin-bottom: 25px;
+}
+
+.descrição h1 {
+  font-family: var(--primary-font);
+  font-weight: 600;
+  font-size: 18px;
+  text-decoration: none;
+
+  margin-bottom: 8px;
+}
+
+.descrição p {
+  font-family: var(--primary-font);
+  font-weight: 400;
+  font-size: 14px;
+  text-decoration: none;
+
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.button-reservar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  background-color: var(--primary-orange);
+  width: 200px;
+  height: 40px;
+  font-weight: 800px;
+  font-family: var(--primary-font);
+  font-size: 15px;
+  color: #ffffff;
+  border-radius: 5px;
+  border: 0 none;
+}
+
+.dark-mode button {
+  color: var(--primary-black);
+}
+
+.criar {
+  width: 230px;
+  height: 45px;
+  font-family: var(--primary-font);
+  font-weight: 800;
+  font-size: 20px;
+  background-color: var(--primary-orange);
+  color: var(--primary-white);
+  border-radius: 8px;
+  border: 0 none;
+  margin-left: 80%;
+  margin-bottom: 2%;
+}
+
+.dark-mode .criar {
+  color: var(--primary-black);
+}
+.criar:hover {
+  background-color: transparent;
+  border-color: var(--primary-white);
+  transition: 0.3s ease-in-out all;
+  cursor: pointer;
+  border-color: var(--primary-white);
+  border: 1px solid #ffffff;
+}
+
+.Alterar {
+  width: 230px;
+  height: 45px;
+  font-family: var(--primary-font);
+  font-weight: 800;
+  font-size: 20px;
+  background-color: var(--primary-orange);
+  color: var(--primary-white);
+  border-radius: 8px;
+  border: 0 none;
+  margin-left: 80%;
+  margin-bottom: 2%;
+}
+
+.dark-mode .Alterar {
+  color: var(--primary-black);
+}
+
+.Alterar:hover {
+  background-color: transparent;
+  border-color: var(--primary-white);
+  transition: 0.3s ease-in-out all;
+  cursor: pointer;
+  border-color: var(--primary-white);
+  border: 1px solid #ffffff;
+}

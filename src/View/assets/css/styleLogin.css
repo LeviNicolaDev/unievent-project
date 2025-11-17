@@ -1,0 +1,353 @@
+:root {
+  --primary-orange: #f56f22;
+  --primary-black: #272727;
+  --primary-white: #ffffff;
+  --primary-gray: #d9d9d9;
+  --primary-font: "Plus Jakarta Sans", sans-serif;
+
+  --z-index-base: 1;
+  --z-index-middle: 5;
+  --z-index-top: 10;
+  --z-index-overlay: 15;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--primary-font);
+  background-color: var(--primary-black);
+  height: 100vh;
+  margin: 0;
+}
+.dark-mode {
+  background-color: var(--primary-white);
+}
+
+.login-container {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  width: 1000px;
+  height: 700px;
+  border-radius: 20px 0px 0px 0px;
+  overflow: hidden;
+  background-color: var(--primary-white);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.dark-mode .login-container {
+  background-color: var(--primary-black);
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  transition: all 0.8s ease;
+  top: 0;
+  left: 0;
+}
+
+.first-content {
+  z-index: var(--z-index-top);
+  transform: translateX(0%);
+  transition: all 0.8s ease;
+}
+
+.second-content {
+  z-index: var(--z-index-base);
+  transform: translateX(100%);
+  transition: all 0.8s ease;
+}
+
+.login-container::before {
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 100%;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  left: 0;
+  top: 0;
+  transition: all 0.8s ease;
+  z-index: var(--z-index-middle);
+}
+
+/* ESTADO SIGN IN */
+.login-container.sign-in-js .first-content {
+  transform: translateX(-100%);
+  z-index: var(--z-index-base);
+}
+
+.login-container.sign-in-js .second-content {
+  transform: translateX(0%);
+  z-index: var(--z-index-top);
+}
+
+.login-container.sign-in-js::before {
+  left: 60%;
+  border-radius: 0 15px 15px 0;
+}
+
+/* ESTADO SIGN UP */
+.login-container.sign-up-js .first-content {
+  transform: translateX(0%);
+  z-index: var(--z-index-top);
+}
+
+.login-container.sign-up-js .second-content {
+  transform: translateX(100%);
+  z-index: var(--z-index-base);
+}
+
+.login-container.sign-up-js::before {
+  left: 0;
+  border-radius: 15px 0 0 15px;
+}
+
+.titulo {
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.titulo-primary {
+  color: var(--primary-white);
+}
+
+.titulo-second {
+  color: var(--primary-orange);
+}
+
+.descricao {
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 25px;
+}
+
+.descricao-primary {
+  color: var(--primary-white);
+}
+
+.dark-mode .descricao-second {
+  color: var(--primary-white);
+}
+
+.descricao-second {
+  color: var(--primary-black);
+}
+
+.btn {
+  border-radius: 15px;
+  text-transform: uppercase;
+  color: var(--primary-white);
+  font-size: 12px;
+  padding: 10px 40px;
+  cursor: pointer;
+  font-weight: bold;
+  border: none;
+  margin-top: 1rem;
+  transition: all 0.4s;
+}
+
+.btn-primary {
+  background-color: transparent;
+  border: 1px solid var(--primary-white);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-white);
+  color: var(--primary-orange);
+}
+
+.dark-mode .btn-second {
+  background-color: var(--primary-black);
+  border: 1px solid var(--primary-orange);
+  color: var(--primary-orange);
+}
+
+.btn-second {
+  background-color: var(--primary-orange);
+  border: 1px solid var(--primary-orange);
+}
+.dark-mode .btn-second:hover {
+  background-color: var(--primary-orange);
+  color: var(--primary-black);
+  border: 1px solid var(--primary-orange);
+}
+
+.btn-second:hover {
+  background-color: var(--primary-white);
+  color: var(--primary-orange);
+  border: 1px solid var(--primary-orange);
+}
+
+.first-column {
+  width: 40%;
+  padding: 40px 20px;
+  text-align: center;
+  z-index: var(--z-index-overlay);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-orange);
+}
+
+.second-column {
+  width: 60%;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  text-align: center;
+}
+
+.label-input {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  margin: 8px 0;
+  border-radius: 8px;
+  padding: 0 10px;
+  border: 1px solid var(--primary-orange);
+}
+
+.dark-mode .formulario input {
+  height: 45px;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  color: var(--primary-white);
+  outline: none;
+  padding-left: 10px;
+}
+
+.formulario input {
+  height: 45px;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  outline: none;
+  padding-left: 10px;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #ecf0f1 inset !important;
+  -webkit-text-fill-color: var(--primary-black) !important;
+}
+
+.icon-modify {
+  color: #7f8c8d;
+  font-size: 18px;
+}
+
+.dark-mode .password {
+  color: var(--primary-white);
+  font-size: 16px;
+  margin: 10px 0;
+  text-decoration: none;
+}
+
+.password {
+  color: #34495e;
+  font-size: 15px;
+  margin: 10px 0;
+  text-decoration: none;
+}
+
+.password:hover {
+  text-decoration: underline;
+}
+
+.div-unievent-logo {
+  position: fixed;
+  bottom: 350px;  
+  left: 250px;
+  display: flex;
+}
+.div-unievent-logo p {
+  position: fixed;
+  margin-top: 344px;
+  margin-left: 430px;
+  color: var(--primary-white);
+  font-family: var(--primary-font);
+  font-weight: 800;
+}
+.dark-mode .unievent-logo{
+  filter: invert(80%);
+}
+.dark-mode .div-unievent-logo p {
+  color: var(--primary-black);
+  font-weight: 800;
+}
+
+.message-container {
+  width: 100%;
+  margin-bottom: 2px;
+  min-height: 30px;
+}
+
+.alert-message {
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 18px;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 10px 0;
+}
+
+.alert-message.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.alert-message.alert-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.arrow-button i {
+  text-decoration: none;
+  color: var(--primary-white);
+  font-size: 30px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  transition: all 0.3s ease;
+}
+
+.arrow-button i:hover {
+  transform: scale(1.04);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}   
