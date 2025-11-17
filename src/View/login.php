@@ -46,7 +46,7 @@ ob_start();
                 <h2 class="titulo titulo-second" data-i18n="create_account">Criar conta</h2>
                 <p class="descricao descricao-second" data-i18n="use_institutional_email">Utilize seu email
                     institucional</p>
-                <form action="public/index.php?action=loginCadastrar" class="formulario"
+                <form action="/unievent-project/public/index.php?action=loginCadastrar" class="formulario"
                     method='post'>
                     <label class='label-input'>
                         <i class="fa-solid fa-user icon-modify"></i>
